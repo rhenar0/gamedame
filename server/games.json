@@ -1,0 +1,38 @@
+{
+  "CUBE1": {
+    "name" : "Salon 1",
+    "nb_ply" : 2,
+    "nb_spec" : 4,
+    "cube_id" : 124,
+    "party" : [
+      {
+        "player_one" : {
+          "name" : "",
+          "id" : ""
+        },
+        "player_two" : {
+          "name" : "",
+          "id" : ""
+        }
+      }
+    ]
+  },
+  "CUBE2": {
+    "name" : "Salon 2",
+    "nb_ply" : 2,
+    "nb_spec" : 4,
+    "cube_id" : 224,
+    "party" : [
+      {
+        "player_one_id" : {
+          "name" : "",
+          "id" : ""
+        },
+        "player_two" : {
+          "name" : "",
+          "id" : ""
+        }
+      }
+    ]
+  }
+}

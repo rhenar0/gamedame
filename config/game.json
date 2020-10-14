@@ -1,0 +1,10 @@
+{
+  "user": {
+    "pseudo" : "user"
+  },
+  "games": {
+    "session_id": 0,
+    "player_id": 0,
+    "action": "null"
+  }
+}
