@@ -74,4 +74,6 @@ def inject_id(cube, spone):
     else:
         return "[ERROR] Impossible de connaitre si la place du joueur un est occupé"
 
+def inject_pseudo(cube, ply)
+
 print(inject_id("cubone", getstatus_pone("cubone")))
