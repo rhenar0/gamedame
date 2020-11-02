@@ -78,11 +78,11 @@ def CreationDamier(gui, SW, SH):
                 if compteur2 % 2 == 0:
                     z = int(SW * 0.03)
                     gui.create_rectangle(i, j, i+z, j+z, fill="black", outline="black") # Créer les cases
-                    coordonnees.append([i, j, i+z, j+z, 0, True]) # Ajoute les coordonnées de la case comme décrit dans la présentation de la fonction
+                    coordonnees.append([i, j, i+z, j+z, 0, False]) # Ajoute les coordonnées de la case comme décrit dans la présentation de la fonction
                 else:
                     z = int(SW * 0.03)
                     gui.create_rectangle(i, j, i+z, j+z, fill="white", outline="black") # Créer les cases
-                    coordonnees.append([i, j, i+z, j+z, 0, False]) # Ajoute les coordonnées de la case comme décrit dans la présentation de la fonction
+                    coordonnees.append([i, j, i+z, j+z, 0, True]) # Ajoute les coordonnées de la case comme décrit dans la présentation de la fonction
                 compteur2 += 1
             compteur1 += 1
 
@@ -204,7 +204,7 @@ def caseCorrespondanteDebut(event):
                 interface["typeCaseDebut"] = Coord[i][4]
                 interface["xCaseDebut"] = [Coord[i][0], Coord[i][2]]
                 interface["yCaseDebut"] = [Coord[i][1], Coord[i][3]]
-                print(interface["typeCaseDebut"], interface["xCaseDebut"], interface["yCaseDebut"])
+                print(interface["typeCaseDebut"], interface["xCaseDebut"], interface["yCaseDebut"], interface["couleurCase"])
 
 def caseCorrespondanteFin(event):
     """
@@ -233,17 +233,12 @@ def deplacementPion(event):
     xCoordCaseArrivee = [interface["xCaseFin"][0], interface["xCaseFin"][1]]
     yCoordCaseArrivee = [interface["yCaseFin"][0], interface["yCaseFin"][1]]
     typeCaseArrive = interface["typeCaseFin"]
-    print(typeCaseDepart, typeCaseArrive)
+    print(typeCaseDepart, typeCaseArrive, couleurCase)
     if typeCaseArrive == 0:
         if couleurCase == True:
-            gui.create_rectangle(xCoordCaseDepart[0], yCoordCaseDepart[0], xCoordCaseDepart[1], yCoordCaseDepart[1], fill="white", outline="black")
-            if typeCaseDepart == 1:
-                gui.create_oval(xCoordCaseArrivee[0], yCoordCaseArrivee[0], xCoordCaseArrivee[1], yCoordCaseArrivee[1], fill="red")
-            else:
-                gui.create_oval(xCoordCaseArrivee[0], yCoordCaseArrivee[0], xCoordCaseArrivee[1], yCoordCaseArrivee[1], fill="blue")
+            print("j'ai compris")
         else:
-            gui.create_rectangle(xCoordCaseDepart[0], yCoordCaseDepart[0], xCoordCaseDepart[1], yCoordCaseDepart[1],
-                                 fill="white", outline="black")
+            gui.create_rectangle(xCoordCaseDepart[0], yCoordCaseDepart[0], xCoordCaseDepart[1], yCoordCaseDepart[1], fill="black", outline="black")
             if typeCaseDepart == 1:
                 gui.create_oval(xCoordCaseArrivee[0], yCoordCaseArrivee[0], xCoordCaseArrivee[1], yCoordCaseArrivee[1],
                                 fill="red")
