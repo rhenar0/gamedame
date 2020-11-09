@@ -235,7 +235,7 @@ def deplacementPion(event):
     typeCaseArrive = interface["typeCaseFin"]
     print(typeCaseDepart, typeCaseArrive, couleurCase)
     if typeCaseArrive == 0:
-        if couleurCase == True:
+        if couleurCase is True:
             print("j'ai compris")
         else:
             gui.create_rectangle(xCoordCaseDepart[0], yCoordCaseDepart[0], xCoordCaseDepart[1], yCoordCaseDepart[1], fill="black", outline="black")
