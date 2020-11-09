@@ -144,11 +144,10 @@ def inject_id(cube, spone):
         log = db.child(cube).child("config").update({"pone_defined": "yes"})
         log_t = db.child(cube).child("players").child("ply_one").update({"id": str(id.hex)})
         return log, log_t
-    elif spone == "yes":
+    if spone == "yes":
         log_t = db.child(cube).child("players").child("ply_two").update({"id": str(id.hex)})
         return log_t
-    else:
-        return "[ERROR] Impossible de connaitre si la place du joueur un est occupé"
+    return "[ERROR] Impossible de connaitre si la place du joueur un est occupé"
 
 def inject_pseudo(cube, ply, pseudo):
     """
